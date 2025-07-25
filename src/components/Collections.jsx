@@ -1,5 +1,7 @@
 import React, { useState, useCallback, memo } from "react";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 const collections = [
   {
     id: "oversized-tees",
@@ -63,6 +65,13 @@ const CollectionItem = memo(function CollectionItem({
 });
 
 const Collections = () => {
+  useEffect(() => {
+      AOS.init({
+        duration: 500,
+        delay: 200,   
+        once: true       
+      });
+    }, []);
   const [hoveredIdx, setHoveredIdx] = useState(null);
   const [showSlide, setShowSlide] = useState(false);
   const [mouse, setMouse] = useState({ x: 0, y: 0 });
@@ -77,9 +86,9 @@ const Collections = () => {
   }, [hoveredIdx]);
 
   return (
-    <section data-color='neongreen' className="collection-section section relative w-full min-h-[100vh] bg-[#121212] text-[#FFFEFE]">
-      <h2 className="text-center text-[1.8vw] font-semibold mb-8 tracking-widest uppercase">Collections</h2>
-      <div
+    <section className="collection-section relative w-full min-h-[100vh] bg-[#121212] text-[#FFFEFE]">
+      <h2 data-aos="fade-up" className="text-center text-[1.8vw] font-semibold mb-8 tracking-widest uppercase">Collections</h2>
+      <div data-aos="fade-up"
         className="w-full eff-area"
         onMouseEnter={() => setShowSlide(true)}
         onMouseLeave={() => {
@@ -109,7 +118,6 @@ const Collections = () => {
           left: mouse.x,
           width: "25vw",
           height: "30vw",
-          backgroundColor: "#7fffd4", // aquamarine
           transform: `translate(${-mouse.x * 0.21}px, ${-mouse.y * 0.7}px)`,
         }}
       >

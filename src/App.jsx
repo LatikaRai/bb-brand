@@ -6,6 +6,7 @@ import Para from './components/Para'
 import Video from './components/Video'
 import Collections from './components/Collections'
 import Navbar from './components/Navbar'
+import About from './components/About'
 // import Mainroutes from './routes/Mainroutes'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
       <Para/>
       <Collections/>
       <Video/>
+      <About/>
     </body>
   )
 }

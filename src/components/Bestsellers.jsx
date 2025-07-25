@@ -1,11 +1,15 @@
 import React from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 const Bestsellers = () => {
+  
   return (
-    <div data-color='white' className='bestsellers section relative w-full h-[300vh] flex flex-col justify-center items-center gap-[1vw]'>
-      <h1 className='w-full absolute top-[5%] right-[3%] text-[5vw] text-right leading-none'>Our Bestsellers Define <br /> the Culture</h1>
+    <div className='bestsellers relative w-full h-[300vh] flex flex-col justify-center items-center gap-[1vw]'>
+      <h1 data-aos="fade-left" className='w-full absolute top-[5%] right-[3%] text-[5vw] text-right leading-none'>Our Bestsellers Define <br /> the Culture</h1>
       <div className="best-cloths relative flex items-end justify-between w-full h-[70vh] mt-10">
-        <div className="cloth-item absolute -top-[80%] w-[23vw] h-full">
+        <div data-aos="fade-up" className="cloth-item absolute -top-[80%] w-[23vw] h-full">
           <video className='w-full h-full object-cover border-none' autoPlay loop muted playsInline>
             <source src="/videos/b1.mp4" type="video/mp4" />
           </video>
@@ -17,7 +21,7 @@ const Bestsellers = () => {
             </div>
           </div>
         </div>
-        <div className="cloth-item absolute right-0 -top-[20%] w-[23vw] h-full">
+        <div data-aos="fade-up" className="cloth-item absolute right-0 -top-[20%] w-[23vw] h-full">
           <video className='w-full h-full object-cover border-none' autoPlay loop muted playsInline>
             <source src="/videos/b3.mp4" type="video/mp4" />
           </video>
@@ -29,7 +33,7 @@ const Bestsellers = () => {
             </div>
           </div>
         </div>
-        <div className="cloth-item absolute left-[15%] top-[80%] w-[23vw] h-full">
+        <div data-aos="fade-up" className="cloth-item absolute left-[15%] top-[80%] w-[23vw] h-full">
           <video className='w-full h-full object-cover border-none' autoPlay loop muted playsInline>
             <source src="/videos/b2.mp4" type="video/mp4" />
           </video>
@@ -41,7 +45,7 @@ const Bestsellers = () => {
             </div>
           </div>
         </div>
-        <div className="cloth-item absolute top-[150%] right-[10%] w-[23vw] h-full">
+        <div data-aos="fade-up" className="cloth-item absolute top-[150%] right-[10%] w-[23vw] h-full">
           <video className='w-full h-full object-cover border-none' autoPlay loop muted playsInline>
             <source src="/videos/b4.mp4" type="video/mp4" />
           </video>
