@@ -3,7 +3,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
 
+
 const Bestsellers = () => {
+  useEffect(() => {
+          AOS.init({
+            duration: 500,
+            delay: 200,   
+            once: true       
+          });
+        }, []);
   
   return (
     <div className='bestsellers relative w-full h-[300vh] flex flex-col justify-center items-center gap-[1vw]'>

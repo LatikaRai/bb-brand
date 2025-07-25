@@ -20,7 +20,7 @@ const About = () => {
     });
   }, []);
   return (
-    <div className="about-section relative w-full h-[200vh]">
+    <div className="about-section relative w-full h-[250vh]">
       <div className="slides overflow-hidden sticky top-0 left-0 flex gap-20 w-full h-[100vh]">
         <div className="slide w-full flex items-center justify-center h-screen flex-shrink-0">
           <div class="text font-[PP_Neue_Machina_Inktrap_Medium]">
@@ -78,7 +78,25 @@ const About = () => {
             />
           </div>
         </div>
-        
+        <div className="slide w-full flex items-center justify-center h-screen flex-shrink-0">
+          <div class="image absolute top-[23%] right-0 rounded-full overflow-hidden -translate-y-1/2 right-[-10%] w-[22rem] h-[22rem]">
+            <img
+              class="w-full h-full object-cover "
+              src="https://youthiapa.com/cdn/shop/products/TheComicTeetransbg.png?v=1681817400&width=480"
+              alt=""
+            />
+          </div>
+          <div class="absolute bottom-[55%] right-[25%]">
+            <h1 class="text-5xl ">Not just what you wear, <br /> but what you stand for.</h1>
+          </div>
+          <div class="image absolute bottom-[10%] left-[15%] rounded-full overflow-hidden -translate-y-1/2 right-[-10%] w-[17rem] h-[17rem]">
+            <img
+              class="w-full h-full object-cover "
+              src="https://youthiapa.com/cdn/shop/files/WhatsApp_Image_2025-07-15_at_20.27.58.jpg?v=1752603412&width=720"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
