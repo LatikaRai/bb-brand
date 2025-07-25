@@ -10,7 +10,7 @@ import Navbar from './components/Navbar'
 
 const App = () => {
   return (
-    <body className='body' theme='black'>
+    <body theme='white'>
       <Navbar/>
       {/* <Mainroutes/> */}
       <Home/>
