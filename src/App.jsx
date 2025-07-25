@@ -1,21 +1,25 @@
 import React from 'react'
+import Bestsellers from './components/Bestsellers'
 import Home from './components/Home'
 import Marquee from './components/Marquee'
 import Para from './components/Para'
 import Video from './components/Video'
 import Collections from './components/Collections'
 import Navbar from './components/Navbar'
+// import Mainroutes from './routes/Mainroutes'
 
 const App = () => {
   return (
-    <div>
+    <body className='body' theme='black'>
       <Navbar/>
+      {/* <Mainroutes/> */}
       <Home/>
       <Marquee/>
+      <Bestsellers/>
       <Para/>
-      <Video/>
       <Collections/>
-    </div>
+      <Video/>
+    </body>
   )
 }
 

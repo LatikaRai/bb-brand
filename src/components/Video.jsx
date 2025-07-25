@@ -23,7 +23,7 @@ const Video = () => {
   });
 
   return (
-    <div className='video-container w-full h-[100vh] flex items-center justify-center'>
+    <div data-color='white' className='video-container section relative w-full h-[100vh] flex items-center justify-center'>
       <video className='w-[25vw] h-[50vh] object-cover border-none' autoPlay loop muted playsInline>
         <source src="/videos/v1.mp4" type="video/mp4" />
       </video>

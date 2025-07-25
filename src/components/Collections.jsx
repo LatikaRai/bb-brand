@@ -77,7 +77,7 @@ const Collections = () => {
   }, [hoveredIdx]);
 
   return (
-    <section className="collection-section relative w-full min-h-[100vh] bg-[#121212] text-[#FFFEFE]">
+    <section data-color='neongreen' className="collection-section section relative w-full min-h-[100vh] bg-[#121212] text-[#FFFEFE]">
       <h2 className="text-center text-[1.8vw] font-semibold mb-8 tracking-widest uppercase">Collections</h2>
       <div
         className="w-full eff-area"

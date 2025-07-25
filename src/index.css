@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 *{
   margin: 0;
@@ -9,25 +12,57 @@ html, body {
   width: 100%;
   height: 100%;
 }
+:root{
+    --white: white;
+    --black: black;
+    --white: white;
+    --neongreen: #CDFA18;
+}
+body{
+    transition: background-color ease-out .4s;
+}
+*::selection{
+    background-color: var(--neongreen);
+    color: var(--black);
+}
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+body[theme="neongreen"]{
+    background-color: var(--neongreen);
+}
+body[theme="neongreen"] .section{
+    color: var(--black);
+}
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .section{
+    color: var(--black);
+}
+
 @font-face {
   font-family: "Bebas Neue";
-  src: url(./assets/fonts/BebasNeue-Regular.ttf);
+  src: url(./fonts/BebasNeue-Regular.ttf);
 }
 @font-face {
   font-family: "Coolvetica";
-  src: url(./assets/fonts/Coolvetica-Rg.otf);
+  src: url(./fonts/Coolvetica-Rg.otf);
 }
 @font-face {
   font-family: "Evogria";
-  src: url(./assets/fonts/Evogria.otf);
+  src: url(./fonts/Evogria.otf);
 }
 @font-face {
   font-family: "Highrise";
-  src: url(./assets/fonts/HighriseFont-Bold-Demo.otf);
+  src: url(./fonts/HighriseFont-Bold-Demo.otf);
 }
 @font-face {
   font-family: "Mortend";
-  src: url(./assets/fonts/MortendBold.otf);
+  src: url(./fonts/MortendBold.otf);
 }
 
 .home-section .brand-name {
@@ -48,7 +83,7 @@ html, body {
   display: none;
 }
 .marq-section .moving-txt{
-  font-family: Evogria;
+  font-family: 'Evogria';
   animation: move;
     animation-duration: 9s;
     animation-timing-function: linear;
@@ -82,10 +117,18 @@ html, body {
   padding: 2vw;
   margin-bottom: 2vw;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+nav{
+  padding: 1vw 1.5vw;
+}
+.ryt{
+  padding: 1vw 1.5vw;
+}
+.menu-section {
+  padding: 2vw;
+}
+.menu-section .close{
+  padding: 0.6vw 1.4vw;
+}
 @layer utilities {
   .brand-links a {
     position: relative;
@@ -121,7 +164,7 @@ html, body {
   }
 
   .img-bg.home-bg {
-    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80');
+    background-image: url('https://youthiapa.com/cdn/shop/files/WhatsApp_Image_2025-07-15_at_20.27.58.jpg?v=1752603412&width=720');
   }
 
   .img-bg.collections-bg {
@@ -129,10 +172,28 @@ html, body {
   }
 
   .img-bg.raised-bg {
-    background-image: url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80');
+    background-image: url('https://youthiapa.com/cdn/shop/files/4_84d982b1-46be-4041-81e7-921e72253fe7.jpg?v=1749384246&width=660');
   }
 
   .img-bg.story-bg {
-    background-image: url('https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80');
+    background-image: url('https://youthiapa.com/cdn/shop/files/bb-modified.jpg?v=1750000289&width=1100');
   }
+}
+.bestsellers{
+  padding: 0 4vw;
+}
+.bestsellers h1{
+  font-family: 'Highrise', sans-serif;
+  word-spacing: 0.5vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
+.best-cloths{
+  padding: 0 2vw;
+}
+.cloth-desc{
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(5px);
+  padding: 0 1.5vw;
+  border-radius: 10px;
 }

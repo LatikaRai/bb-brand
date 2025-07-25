@@ -33,13 +33,10 @@ const Navbar = () => {
       }, 400);
     };
 
-    const tiltAngles = [-8, 8, -5, 5];
-
     links.forEach((link, idx) => {
       link.addEventListener('mouseenter', () => {
         crossfadeTo(idx);
         gsap.to(imgBg, {
-          rotate: tiltAngles[idx],
           duration: 0.5,
           ease: 'expo.out',
         });
@@ -54,7 +51,6 @@ const Navbar = () => {
       link.addEventListener('mouseleave', () => {
         crossfadeTo(0);
         gsap.to(imgBg, {
-          rotate: 0,
           duration: 0.5,
           ease: 'expo.inOut',
         });
@@ -90,7 +86,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="w-full h-[10vh] flex justify-between items-center px-4">
+      <nav className="w-full h-[10vh] flex justify-between items-center bg-[#121212]">
         <div className="lft">
           <img
             src="https://youthiapa.com/cdn/shop/files/Logo.png?v=1615319725&width=600"
@@ -98,35 +94,35 @@ const Navbar = () => {
             className="h-[3vh] object-cover absolute"
           />
         </div>
-        <div className="ryt bg-black px-4 py-2 rounded-full flex items-center cursor-pointer">
-          <h4 className="text-white text-[0.7vw] uppercase">Menu</h4>
-          <div className="w-[0.5vw] h-[0.5vw] bg-yellow-400 rounded-full ml-2"></div>
+        <div className="ryt bg-[#CDFA18] rounded-full flex items-center gap-[0.7vw] cursor-default">
+          <h4 className="text-black font-bold text-[0.7vw] uppercase">Menu</h4>
+          <div className="w-[0.5vw] h-[0.5vw] bg-black rounded-full ml-2"></div>
         </div>
       </nav>
 
-      <div className="menu-section w-full h-screen bg-black absolute top-[-100%] left-0 p-12 transition-all ease-in-out duration-700">
+      <div className="menu-section w-full h-screen bg-black absolute top-[-100%] left-0 transition-all ease-in-out duration-700">
         <div className="logo flex justify-between items-center w-full">
           <img
             src="https://youthiapa.com/cdn/shop/files/Logo.png?v=1615319725&width=600"
             alt=""
             className="h-[3vh]"
           />
-          <div className="close bg-yellow-400 px-5 py-3 text-[1.5vw] rounded-full cursor-pointer hover:scale-110 hover:shadow-[0_4px_24px_0_#fdd60055] transition-all">
+          <div className="close bg-[#CDFA18] text-[1.5vw] flex items-center justify-center rounded-full cursor-pointer hover:scale-110 hover:shadow-[0_4px_24px_0_#fdd60055] transition-all">
             x
           </div>
         </div>
 
-        <div className="menu-items pt-20 flex justify-center items-center gap-[10vw] mt-8">
-          <div className="img-cont relative bg-yellow-400 h-[50vh] w-[40vh] overflow-hidden">
-            <div className="img-bg home-bg absolute w-full h-full top-0 left-0 bg-cover bg-center scale-[1.1] z-0"></div>
+        <div className="menu-items flex justify-center items-center gap-[10vw] mt-8">
+          <div className="img-cont relative h-[50vh] w-[40vh] overflow-hidden">
+            <div className="img-bg home-bg absolute w-full h-full top-0 left-0 bg-cover bg-center z-0"></div>
           </div>
 
           <div className="links flex flex-col gap-10">
-            <div className="brand-links flex flex-col gap-4 text-white text-[4vw] font-medium">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/collections">Collections</NavLink>
-              <NavLink to="/raised-right">Raised Right</NavLink>
-              <NavLink to="/our-story">Our Story</NavLink>
+            <div className="brand-links flex flex-col text-white text-[4vw] font-medium">
+              <NavLink className={(e)=> e.isActive ? "text-[#CDFA18]" : ""} to="/">Home</NavLink>
+              <NavLink className={(e)=> e.isActive ? "text-[#CDFA18]" : ""} to="/collections">Collections</NavLink>
+              <NavLink className={(e)=> e.isActive ? "text-[#CDFA18]" : ""} to="/raised-right">Raised Right</NavLink>
+              <NavLink className={(e)=> e.isActive ? "text-[#CDFA18]" : ""} to="/our-story">Our Story</NavLink>
             </div>
             <div className="social-links flex flex-col gap-2 text-gray-600">
               <a href="#">X</a>
