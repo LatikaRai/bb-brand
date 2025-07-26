@@ -33,7 +33,6 @@ const App = () => {
   return (
     <div className='overflow-hidden'>
       <Navbar/>
-      {/* <Mainroutes/> */}
       <Home/>
       <Marquee/>
       <Bestsellers/>

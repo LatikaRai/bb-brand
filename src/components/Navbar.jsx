@@ -112,7 +112,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="menu-items flex justify-center items-center gap-[10vw] mt-8">
+        <div className="menu-items flex justify-center items-center gap-[10vw]">
           <div className="img-cont relative h-[50vh] w-[40vh] overflow-hidden">
             <div className="img-bg home-bg absolute w-full h-full top-0 left-0 bg-cover bg-center z-0"></div>
           </div>
