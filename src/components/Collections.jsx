@@ -7,31 +7,31 @@ const collections = [
     id: "oversized-tees",
     name: "Oversized T-Shirts",
     role: "Laid-back Streetwear Vibe",
-    image: "/images/oversized-tees.jpg",
+    image: "https://youthiapa.com/cdn/shop/files/6_9d8b0957-3f9e-4900-b9cf-a917a0fd7e5c.jpg?v=1753184006&width=660",
   },
   {
     id: "cargos",
     name: "Utility Cargos",
     role: "Relaxed Fit • Tactical Look",
-    image: "/images/cargos.jpg",
+    image: "https://youthiapa.com/cdn/shop/files/5_6.jpg?v=1749405679&width=660",
   },
   {
     id: "coord",
     name: "Coord Fits",
     role: "Two-Piece. One Statement.",
-    image: "/images/coord.jpg",
+    image: "https://youthiapa.com/cdn/shop/files/5_9.jpg?v=1749563618&width=720",
   },
   {
     id: "hoodies",
     name: "Oversized Hoodies",
     role: "Winter-Ready, BB-Approved",
-    image: "/images/hoodies.png",
+    image: "https://youthiapa.com/cdn/shop/files/backhoodie_1.png?v=1733999155&width=720",
   },
   {
     id: "keychains",
     name: "Accessories",
     role: "Mini Drops of Personality",
-    image: "/images/accessories.jpg",
+    image: "https://youthiapa.com/cdn/shop/products/keychain.jpg?v=1556523300&width=480",
   },
 ];
 
